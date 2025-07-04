@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - MedTrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        h1 {
+            color: #007acc;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f99;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007acc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" required></textarea><br>
+
+        <button type="submit">Send</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

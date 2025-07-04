@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard - MedTrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fa;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        h1 {
+            color: #007acc;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #005f99;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005fa3;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 15px;
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Doctor Dashboard</h1>
+
+    <p>Welcome, Doctor! You can review patient appointments below.</p>
+
+    <h2>Update Appointment Status</h2>
+
+    <form method="post">
+        <label>Patient Name:</label><br>
+        <input type="text" name="patient_name" required><br>
+
+        <label>Appointment Date:</label><br>
+        <input type="date" name="appointment_date" required><br>
+
+        <label>Appointment Time:</label><br>
+        <input type="time" name="appointment_time" required><br>
+
+        <label>Symptoms:</label><br>
+        <textarea name="symptoms" rows="3" required></textarea><br>
+
+        <label>Status:</label><br>
+        <select name="status" required>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+            <option value="Cancelled">Cancelled</option>
+        </select><br>
+
+        <input type="submit" value="Update Status">
+    </form>
+
+    <p><a href="/dashboard">Back to Patient Dashboard</a></p>
+    <p><a href="/logout">Logout</a></p>
+
+</body>
+</html>

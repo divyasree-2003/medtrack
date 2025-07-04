@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+
+        select,
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #0077cc;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 30px 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a New Appointment</h2>
+        <form method="POST">
+            <label>Doctor Name:</label>
+            <select name="doctor" required>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. John">Dr. John</option>
+            </select>
+
+            <label>Appointment Date:</label>
+            <input type="date" name="date" required>
+
+            <label>Appointment Time:</label>
+            <input type="time" name="time" required>
+
+            <label>Symptoms:</label>
+            <textarea name="symptoms" rows="4" required></textarea>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Appointment - MedTrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f5fa;
+            color: #333;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #0077cc;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        select,
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create a New Appointment</h2>
+    <form action="/create-appointment" method="post">
+        <label>Select Doctor:</label>
+        <select name="doctor" required>
+            <option value="Dr. Smith">Dr. Smith</option>
+            <option value="Dr. John">Dr. John</option>
+        </select>
+
+        <label>Appointment Date:</label>
+        <input type="date" name="date" required>
+
+        <label>Appointment Time:</label>
+        <input type="time" name="time" required>
+
+        <label>Describe Your Symptoms:</label>
+        <textarea name="symptoms" rows="4" required></textarea>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup - MedTrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef4f9;
+            color: #333;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #0077cc;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #ffffff;
+            display: inline-block;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 10px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        .message {
+            color: red;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Signup Page</h2>
+
+    <!-- Show flashed messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p class="message">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!-- Signup form -->
+    <form action="{{ url_for('signup') }}" method="POST">
+        <label>Full Name:</label>
+        <input type="text" name="fullname" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" required>
+
+        <label>Confirm Password:</label>
+        <input type="password" name="confirm_password" required>
+
+        <button type="submit">Signup</button>
+    </form>
+
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+</body>
+</html>
