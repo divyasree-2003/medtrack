@@ -22,7 +22,7 @@ app.secret_key = "change_this_to_a_long_random_string"
 # ──────────────────────────────
 # ░░  AWS clients (DynamoDB & SNS)
 # ──────────────────────────────
-AWS_REGION = os.getenv("AWS_REGION", "ap-south-1")          # <— use your region
+AWS_REGION = os.getenv("AWS_REGION", "us-east-1")          # <— use your region
 USERS_TABLE        = "Users"
 APPOINTMENTS_TABLE = "Appointments"
 SNS_TOPIC_ARN      = os.getenv("SNS_TOPIC_ARN")             # set this after creating the topic
